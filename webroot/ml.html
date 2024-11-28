@@ -1,0 +1,198 @@
+<html>
+  <head>
+    <title>MankTwo Special Edition</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #121212; /* Gelap solid */
+        color: #e0e0e0; /* Kontras teks lebih cerah */
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .header, .footer {
+        background-color: #1e1e1e; /* Sedikit lebih terang */
+        border: 1px solid #333;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+      .content {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        width: 300px;
+        border: 1px solid #333; /* Border ringan */
+      }
+      .content h2 {
+        font-size: 20px;
+        margin: 0 0 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .content h2 img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+      .option {
+        background-color: #262626;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .option span {
+        font-size: 16px;
+      }
+      .dropdown {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+        border: 1px solid #333;
+        border-radius: 5px;
+        font-size: 14px;
+        height: 30px;
+        padding: 0 8px;
+        outline: none;
+        cursor: pointer;
+      }
+      .dropdown:hover {
+        background-color: #333;
+      }
+      .slider-container {
+        margin: 20px 0;
+      }
+      .slider-container span {
+        font-size: 18px;
+      }
+      .range-slider {
+        width: 100%;
+        margin-top: 10px;
+        background-color: #333;
+        outline: none;
+        height: 5px;
+        border-radius: 5px;
+      }
+      .range-slider::-webkit-slider-thumb {
+        width: 15px;
+        height: 15px;
+        background-color: #6200ea;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .optimize-button {
+        background-color: #1e1e1e;
+        border: 1px solid #333;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 50px; /* Vertikal tengah */
+        height: 50px;
+        width: 200px;
+        margin: 20px auto 0;
+      }
+      .optimize-button:hover {
+        background-color: #6200ea;
+      }
+
+      /* CSS untuk Switch */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #444;
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+      input:checked + .slider {
+        background-color: #6200ea; /* Warna ungu gelap */
+      }
+      input:checked + .slider:before {
+        transform: translateX(20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">MankTwo Special Edition</div>
+      <div class="content">
+        <h2>
+          MOBILE LEGENDS
+          <img alt="Game icon" height="40" src="ml.jpg" width="40" />
+        </h2>
+        <div class="option">
+          <span>High Performance</span>
+          <label class="switch">
+            <input type="checkbox" id="performance" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="option">
+          <span>Clear Cache</span>
+          <label class="switch">
+            <input type="checkbox" id="cache" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="option">
+          <span>Frame Rate (some devices would work)</span>
+          <select id="hzSet" class="dropdown">
+            <option value="60">60 Hz</option>
+            <option value="90">90 Hz</option>
+            <option value="120">120 Hz</option>
+            <option value="144">144 Hz</option>
+          </select>
+        </div>
+        <div class="slider-container">
+          <span>DynamicTouch Adaptive</span>
+          <input
+            class="range-slider"
+            id="dynamicTouchAdaptive"
+            max="100"
+            min="0"
+            type="range"
+            value="50"
+          />
+        </div>
+      </div>
+      <div class="footer optimize-button" id="optimizeButton">OPTIMIZE</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <title>MankTwo Special Edition</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+      body {
+        background-color: #000;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        text-align: center;
+      }
+      .header, .footer {
+        background-color: #383838;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+      .content {
+        background-color: #383838;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        width: 300px;
+        margin: 0 auto;
+      }
+      .content h2 {
+        font-size: 20px;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .content h2 img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+      .option {
+        background-color: #6b6b6b;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .option span {
+        font-size: 18px;
+      }
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+      }
+      input:checked + .slider {
+        background-color: #34075e;
+      }
+      input:checked + .slider:before {
+        transform: translateX(20px);
+      }
+      .slider-container {
+        margin: 20px 0;
+      }
+      .slider-container span {
+        font-size: 18px;
+      }
+      .range-slider {
+        width: 100%;
+        margin-top: 10px;
+      }
+      .footer {
+        margin-top: 30px;
+      }
+      .optimize-button {
+        background-color: #383838;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        MankTwo Special Edition
+      </div>
+      <div class="content">
+        <h2>
+          FREE FIRE
+          <img alt="Game icon" height="40" src="ff.jpg" width="40"/>
+        </h2>
+        <div class="option">
+          <span>Headtrick</span>
+          <!-- Switch Headtrick -->
+          <label class="switch">
+            <input type="checkbox" id="headtrick"/>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="option">
+          <span>FreeFire Optimization</span>
+          <!-- Switch FreeFire Optimization -->
+          <label class="switch">
+            <input type="checkbox" id="freefireOptimization"/>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="option">
+          <span>Dex Compiler</span>
+          <!-- Switch Dex Compiler -->
+          <label class="switch">
+            <input type="checkbox" id="dexCompiler"/>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="slider-container">
+          <span>DynamicTouch Adaptive</span>
+          <!-- Slider DynamicTouch Adaptive -->
+          <input class="range-slider" id="dynamicTouchAdaptive" max="100" min="0" type="range" value="50"/>
+        </div>
+      </div>
+      <div class="footer optimize-button" id="optimizeButton">
+        OPTIMIZE
+      </div>
+    </div>
+  </body>
+</html>
